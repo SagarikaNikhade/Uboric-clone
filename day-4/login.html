@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <style>
+        #form>#name{
+            width:80%;
+            height:30px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+        #form>#pass{
+            width:80%;
+            height:30px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+        .tomy{
+            border:0px solid red;
+            width:80%;
+            height:20px;
+            display:flex;
+            background-color: white;
+            text-align: center;
+           
+        }
+        .tomy>div{
+            border:0px solid rgb(21, 0, 255);
+            width:40%;
+            height:20px;
+            margin: auto;
+            background-color: white;
+           
+        }
+        button{
+            border:0px solid red;
+            width:80%;
+            height:40px;
+            background-color: black;
+            color:white;
+            margin-top: 40px;  
+        }
+        .goa{
+            border:0px solid red;
+            height:50px;
+            width:100%;
+            display:flex;
+            background-color:white;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            margin-bottom: 40px; 
+        }
+        .goa>div{
+            border:0px solid rgb(0, 4, 255);
+            height:50px;
+            width:40%;
+            margin: auto; 
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #container{
+            border:0px solid rgb(0, 4, 255);
+            width:60%;
+            height:400px;
+            margin: auto;
+            padding-left: 150px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div class="goa">
+        <div>Sign in</div>
+    </div>
+    <div>
+        <form id="form">
+            <input placeholder="Username" type="text" id="name">
+            <input placeholder="Password" type="password" id="pass">
+            
+        </form>
+    </div>
+
+    <div class="tomy">
+        <div>Remember me</div>
+        <div>Lost your password?</div>
+    </div>
+
+    <button id="submit">Sign in</button>
+</div>
+    
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",uboric);
+
+    let uboricArr=JSON.parse(localStorage.getItem("login-list")) || [];
+
+    function uboric(event){
+        event.preventDefault();
+
+        let uboricObj={
+            name:document.querySelector("name").value,
+            password:document.querySelector("pass").value,
+            
+        };
+        console.log(uboricObj);
+
+        uboricArr.push(uboricObj)
+
+        localStorage.setItem("login-list",JSON.stringify(uboricArr))
+
+    } 
+</script>
