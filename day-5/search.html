@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <style>
+        h1{
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        #category{
+           width:60%;
+           height:30px;
+           margin-bottom: 40px;    
+        }
+        #form>#search{
+            width:40%;
+           height:30px;   
+        }
+        #form>#search>button{
+           width:20%;
+           height:30px; 
+        }
+        #form{
+          display:flex;
+        }
+    </style>
+</head>
+<body>
+   <h1>Search Products</h1>
+   <select id="category">
+     <option value="All Categories">All Categories</option>
+     <option value="Bathroom Accessories">Bathroom Accessories</option>
+     <option value="Clothing">Clothing</option>
+   </select>
+
+  <form id="form">
+    <input placeholder="search" type="text" id="search">
+    <button>SEARCH</button>
+  </form>
+
+   
+    
+</body>
+</html>
