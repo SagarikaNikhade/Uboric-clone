@@ -6,17 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in</title>
     <style>
-        #form>#name{
+        #form>#user{
             width:80%;
             height:30px;
             margin-bottom: 20px;
             background-color: white;
         }
-        #form>#pass{
+        #form>#key{
             width:80%;
             height:30px;
             margin-bottom: 20px;
             background-color: white;
+        }
+        #form>#submit{
+            width:80%;
+            height:30px;
+            margin-bottom: 20px;
+            background-color: white;
+            background-color: black;
+            color:white;
         }
         .tomy{
             border:0px solid red;
@@ -33,7 +41,7 @@
             height:20px;
             margin: auto;
             background-color: white;
-           
+            margin-top: 20px;
         }
         button{
             border:0px solid red;
@@ -41,7 +49,7 @@
             height:40px;
             background-color: black;
             color:white;
-            margin-top: 40px;  
+            
         }
         .goa{
             border:0px solid red;
@@ -72,24 +80,30 @@
 </head>
 <body>
     <div id="container">
-    <div class="goa">
-        <div>Sign in</div>
-    </div>
-    <div>
-        <form id="form">
-            <input placeholder="Username" type="text" id="name">
-            <input placeholder="Password" type="password" id="pass">
-            
-        </form>
-    </div>
+        <div class="goa">
+            <div>Sign in</div>
+        </div>
+        <div>
+            <form id="form">
+                <input placeholder="Username" type="text" id="user" required>
+                <input placeholder="Password" type="password" id="key" required>
+                
+                <input  type="submit" id="submit" value="Log in" required>
+               
+            </form>
+        </div>
 
-    <div class="tomy">
-        <div>Remember me</div>
-        <div>Lost your password?</div>
+        <button><a href="./signup.html" target="_blank">Sign up</a></button>
+    
+        <div class="tomy">
+            <div>Remember me</div>
+            <div>Lost your password?</div>
+        </div>
+    
+        <!--<button onclick="myfunction()" id="submit"><a href="./index.html" target="_blank">Sign in</a></button>
+        <button><a href="./signup.html" target="_blank">Sign up</a></button>-->
+    
     </div>
-
-    <button id="submit">Sign in</button>
-</div>
     
 </body>
 </html>
@@ -97,21 +111,36 @@
 <script>
     document.querySelector("form").addEventListener("submit",uboric);
 
-    let uboricArr=JSON.parse(localStorage.getItem("login-list")) || [];
+let uboricArr=JSON.parse(localStorage.getItem("uboric-list")) || [];
 
-    function uboric(event){
-        event.preventDefault();
+function uboric(event){
+    event.preventDefault();
 
-        let uboricObj={
-            name:document.querySelector("name").value,
-            password:document.querySelector("pass").value,
-            
-        };
-        console.log(uboricObj);
+    let name=document.querySelector("#user").value;
+    let password=document.querySelector("#key").value;
+     let flag=false;
+    uboricArr.forEach(function(el){
+        console.log(el.Name,el.Password)
+      if(name==el.Name && password==el.Password){
+        flag=true;
+      console.log(flag)
+      }
+      
+    })
+    if(flag==true){
 
-        uboricArr.push(uboricObj)
+        alert("login successful")
+        window.location.href="index.html"
+    }else{
+        alert("Wrong credentials")
+        window.location.reload()
+    }
 
-        localStorage.setItem("login-list",JSON.stringify(uboricArr))
+   
 
-    } 
+}
+
+    
+
+    
 </script>
