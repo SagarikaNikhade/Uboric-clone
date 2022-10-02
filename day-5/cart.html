@@ -13,25 +13,83 @@
             text-align: center;
             padding-bottom: 20px;
         }
+        #container{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:20px;
+        }
+        #container>div>img{
+            width:100%;
+            height:400px;
+        }
+        #container>div{
+            text-align: center;
+            padding-bottom: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
         button{
             height:50px;
-            width:70%;
-            margin-left: 200px;
-            margin-top: 30px;  
+            width:20%;
+            margin-left:600px ;
         }
-        h2{
-            text-align: center;
-            margin-top: 250px;  
+        #okay{
+          border:0px solid red;
+          display: flex;
+          margin:auto;
+
         }
+        
     </style>
 </head>
 <body>
-    <div><h1>Your Cart(0)</h1></div>
+    <div><h1>Your Cart</h1></div>
+    <a href="index.html" target="_blank"><button>Continue Shopping</button></a>
+    <div id="okay">
+        <div> <h1>Total items:<span></span></h1></div>
+        <div><h2>Total Price:<span></span></h1></div>
+    </div>
+    <div id="container"></div>
 
-    <h2>Your cart is empty </h2>
-    <button>Continue Shopping</button>
+    
     
 
     
 </body>
 </html>
+
+<script>
+    let cartItemsfromLS=JSON.parse(localStorage.getItem("cart-items"));
+    console.log(cartItemsfromLS);
+
+    let total_price=cartItemsfromLS.reduce(function(acc,el){
+       return acc+el.price;
+    },0);
+    //console.log(total_price)
+    document.querySelector("h2>span").innerText=total_price
+    
+
+    document.querySelector("h1>span").innerText=cartItemsfromLS.length;
+
+    cartItemsfromLS.forEach(function(el){
+       let card=document.createElement("div")
+
+       let productImg=document.createElement("img")
+       productImg.src=el.image_url;
+
+       let title=document.createElement("h3")
+       title.innerText=el.name;
+
+       let price=document.createElement("p")
+       price.innerText=el.price;
+
+       
+
+       card.append(productImg,title,price)
+      
+       document.querySelector("#container").append(card)
+
+      
+     })
+
+
+</script>
