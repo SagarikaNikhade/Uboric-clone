@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        .sign{
+            border:0px solid red;
+            width:60%;
+            height:500px;
+            margin:auto;
+            display:flex;
+            margin-top: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .sign>#num1{
+            border:0px solid blue;
+            width:20%;
+            height:400px;
+            margin:auto;
+             
+        }
+        .sign>#num2{
+            border:0px solid blue;
+            width:60%;
+            height:400px;
+            margin:auto;
+            margin-left: 50px;
+        }
+        h1{
+            margin-bottom: 50px;
+        }
+        #num2>form>#name{
+            width:80%;
+            height:30px;
+            margin-bottom: 20px;
+            background-color: white;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+        #num2>form>#name1{
+            width:80%;
+            height:30px;
+            margin-bottom: 20px;
+            background-color: white;
+            margin-bottom: 50px;
+        }
+        #num2>form>#pass{
+            width:80%;
+            height:30px;
+            margin-bottom: 20px;
+            background-color: white;
+            margin-bottom: 50px;
+        }
+        #num2>form>#email{
+            width:80%;
+            height:30px;
+            margin-bottom: 20px;
+            background-color: white;
+            margin-bottom: 50px;
+        }
+        #num2>form>#submit{
+            width:20%;
+            height:30px;
+            margin-bottom: 20px;
+            margin-left: 200px;
+        }
+        h2{
+            font-size: 30px;
+            text-align: center;
+            border:0px solid red;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div><h2>SIGN UP</h2></div>
+    <div class="sign">
+        <div id="num1">
+            <h1>First Name</h1>
+            <h1>Last Name</h1>
+            <h1>Email Adress</h1>
+            <h1>Password</h1>
+           
+
+        </div>
+        <div id="num2">
+            
+            <form>
+                <input id="name" placeholder="First_Name" type="text" />
+                <input id="name1" placeholder="Last_Name" type="text" />
+                <input id="email" placeholder="Email" type="text" />
+                <input id="pass" placeholder="Password" type="password" />
+                <input id="submit" type="submit" value="Submit" />
+              </form>
+            
+        
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",uboric);
+
+let uboricArr=JSON.parse(localStorage.getItem("uboric-list")) || [];
+
+function uboric(event){
+    event.preventDefault();
+
+    let uboricObj={
+        Name:document.querySelector("#name").value,
+        Last_Name:document.querySelector("#name1").value,
+        Email:document.querySelector("#email").value,
+        Password:document.querySelector("#pass").value,
+    };
+
+    console.log(uboricObj);
+     uboricArr.push(uboricObj)
+
+     localStorage.setItem("uboric-list",JSON.stringify(uboricArr));
+}
+
+</script>
+
+
+
+

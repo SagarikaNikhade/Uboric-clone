@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womens Page</title>
+    <style>
+        #container{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:20px;
+        }
+        #container>div>img{
+            width:100%;
+            height:400px;
+        }
+        #container>div{
+            text-align: center;
+            padding-bottom: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        /* navbar */
+        #navbar{
+          border:0px solid red;
+          width:100%;
+          height:40px;
+          text-align: center;
+          background-color: #1f1f1f;
+          color:white;
+          line-height:40px;
+        }
+        .container{
+            border:0px solid red;
+            height:50px;
+            width:100%;
+            display:flex;
+            position:fixed;
+            background-color:white;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            cursor: pointer;
+        }
+        .container>div{
+            border:0px solid blue;
+            width:32%;
+            height:50px;
+            margin:auto;
+        }
+        .container>div>img{
+            height:100%;
+            padding-left: 80px;
+        }
+        .card{
+            display:flex;
+            cursor: pointer;
+        }
+        .card>div{
+            border:0px solid blue;
+            width:32%;
+            height:50px;
+            margin:auto; 
+        }
+        .card>div:hover{
+         color:red;
+        }
+        .child{
+            display:flex;
+        }
+        .child>div>a>img{
+            width:40%;
+            height:30px;
+            margin-top:10px;
+            padding-right: 50px;
+        }
+        a>h1{
+            text-align: center;
+            font-size: 20px;
+            color:black;   
+        }
+        h1{
+            text-align: center;
+            font-size: 60px;
+            color:black;   
+        }
+        /* .fashion{
+            border:0px solid blue;
+            width:100%;
+            height:1000px;
+            margin-top: 70px;
+            display: flex;  
+        }
+        .fashion>#fash{
+            border:0px solid red;
+            width:30%;
+            height:900px;
+            margin: auto;
+        }
+        .fashion>#cone{
+            border:0px solid red;
+            width:60%;
+            height:900px;
+            margin: auto;
+        }
+        .fashion>#fash{
+            margin-top: 300px;
+        }
+        #category{
+           width:60%;
+           height:30px;
+           margin-bottom: 50px; 
+           margin-left:80px ;
+        } */
+        /* #cone{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);  
+            grid-template-rows: repeat(4,200px);  
+            gap:20px;
+        }
+        #cone>div{
+          border:0px solid palevioletred;
+          
+        }
+        #cone>div>img{
+            height:150px;
+            width:70%;
+            margin-left: 45px;
+        }
+        #cone>div>h3{
+            margin-top:-7px;
+            text-align: center;
+        }
+        #cone>div>h5{
+            margin-top:-10px;
+            text-align: center;
+        }
+        button{
+            margin-left: 700px;
+            width:100px;
+            height:50px;
+            background-color: white;
+            font-size: 15px;
+        } */
+        .black{
+            border:0px solid red;
+            height:600px;
+            width:100%;
+            margin:auto;
+            background-color: #2a2a2a;
+        }
+        .black>h2{
+            color:white;
+            text-align: center;
+            
+        }
+        #sub{
+            border:0px solid red;
+            height:80px;
+            width:60%;
+            margin:auto; 
+            display:flex;
+            margin-bottom: 50px;  
+        }
+        #sub>div{
+            border:0px solid blue;
+            width:50%;
+            height:40px;
+            margin:auto;
+            color:white;
+            font-size:30px;
+            text-align: center;   
+        }
+        #sub>div>#email{
+            width:100%;
+            height:40px;  
+        }
+        .end{
+            border:0px solid blue;
+            width:80%;
+            height:400px;
+            margin:auto;
+            display:flex;  
+        }
+        .end>div{
+            border:0px solid red;
+            width:30%;
+            height:400px;
+            margin:auto;
+            color:white;  
+        }
+        .end>div>img{
+            width:95%;
+            height:100px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+  <div id="navbar">FOR ONLINE PAYMENT EXTRA ₹5% DISCOUNT ON ORDERS ABOVE ₹500</div>
+    <div class="container">
+        <div>
+            <img src="https://outstripinfotech.com/wpword/razi/wp-content/uploads/2022/08/200x80black.png" alt=""/>
+        </div>
+        <div class="card">
+            <div>
+                <a href="./index.html">
+                    <h1>Home</h1>
+                  </a>
+            </div>
+            <div>
+                <a href="./about.html" target="_blank">
+                    <h1>About Us</h1>
+                  </a>
+            </div>
+            <div>
+                <a href="./contact.html" target="_blank">
+                    <h1>Contact Us</h1>
+                </a>
+            </div>
+        </div>
+        <div class="child">
+            <div>
+              <a href="./search.html" target="_blank">
+                <img src="https://cdn4.iconfinder.com/data/icons/materia-tools-vol-1/24/023_042_023_zoom_search_lense_tool-512.png" alt=""/>
+              </a>
+            </div>
+            <div>
+                <a href="./login.html" target="_blank">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWu2D0F2MyGfaRB5k6YaLUhllPh7e7ri1quw&usqp=CAU" alt=""/>
+                </a>
+              </div>
+              <div>
+                <a href="./whishlist.html" target="_blank">
+                  <img src="https://toppng.com/uploads/preview/instagram-heart-icon-115494578718j7ye6sgja.png" alt=""/>
+                </a>
+              </div>
+              <div>
+                <a href="./cart.html" target="_blank">
+                  <img src="https://static.thenounproject.com/png/116469-200.png" alt=""/>
+                </a>
+              </div>    
+        </div>
+    </div>
+    <!-- <a href="cart.html" target="_blank"><button>Go to Cart</button></a> -->
+    <div id="container">
+
+    </div>
+
+    <!-- footer -->
+    <div class="black">
+      <h2>Want style Ideas and Treats?</h2>
+      <div id="sub">
+          <div><input placeholder="Email" type="text" id="email"></div>
+          <div id="sbc">Subscribe</div>
+      </div>
+
+      <div class="end">
+          <div><img src="https://outstripinfotech.com/wpword/razi/wp-content/uploads/2022/08/uboric.png" alt=""/></div>
+          <div>
+              <p>SUPPORT</p>
+              <p>About Us</p>
+              <p>Contact Us</p>
+          </div>
+          <div>
+              <p>SHOP</p>
+              <p>My account</p>    
+          </div>
+          <div>
+              <p>COMPANY</p>
+              <p>Shipping & Returns</p>
+              <p>Privacy Policy</p>
+              <p>Terms & Conditions</p>
+          </div>
+          <div>
+              <p>CONTACT</p>
+              <p> Customer Care</p>
+              <p>Contact Support Available</p>
+              <p>Mon To Sat : 10:00 Am to 6:00 Pm</p>
+              <p>E-mail</p>
+              <p>uboricllp@gmail.com</p>
+              <p>Mobile</p>
+              <p>+91 97243 82162</p>
+              <p>+91 82000 99386</p>
+          </div>
+      </div>
+      
+      
+
+
+  </div>
+</body>
+</html>
+
+<script>
+     let Data = [
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/dolcegabbana/211d9e22/dolce-gabbana-Multicolor-Calendar-print-Poplin-Corset.jpeg",
+      name: "DOLCE & GABBANA",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/562c38ea/rebecca-vallance-designer-white-Robe-de-mariee-Floria-en-dentelle.jpeg",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/net-a-porter/36723ba4/skims-Black-Soft-Lounge-Ribbed-Stretch-modal-Maxi-Slip-Dress.jpeg",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/jarlolondon/b69ae42d/jarlo-Navy-Gabriella-Cowl-Neck-Fishtail-Gown-With-Open-Back.jpeg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/03693441/off-white-co-virgil-abloh-beige-Robe-a-capuche-en-coton.jpeg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/revolveclothing/2686298d/bcbgmaxazria-Black-ROBE-DE-SOIREE.jpeg",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/sachinandbabi/997771ad/sachin-babi-Red-Blue-Floral-Deandra-Jacket.jpeg",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/9c4f9140/vivienne-westwood-white-Robe-de-mariee-longue-en-satin.jpeg",
+      name: "UNISEX REEBOK SHOW SHOES",
+      price: 1249,
+      strikedoffprice: 1489,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/602f33d0/polo-ralph-lauren-blue-Robe-midi-brodee-en-coton.jpeg",
+      name: "WOMEN'S CLASSIC REEBOK PANTS",
+      price: 1459,
+      strikedoffprice: 1235,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/c68b08a4/zimmermann-beige-Robe-longue-Kaleidoscope-en-organza.jpeg",
+      name: "WOMEN'S REEBOK RUNNING RUN ESSENTIALS SHORT SLEEVE GRAPHIC",
+      price: 849,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/16a8f9b8/alex-perry-black-Robe-Haynes-mit-Handschuhen.jpeg",
+      name: "WOMEN'S REEBOK TRAINING WOR MESH TIGHTS",
+      price: 1550,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/ruelala/ece66bf0/bebe-Purple-Sequin-Mini-Dress.jpeg",
+      name: "WOMEN'S REEBOK RUNNING OSR HIGH-IMPACT BRA",
+      price: 1399,
+      strikedoffprice: 6599,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/cettire/c2e241e2/michael-by-michael-kors-Black-Ruffle-Trim-Maxi-Dress.jpeg",
+      name: "UNISEX REEBOK TRAINING ACTIVE CORE BACKPACK - MEDIUM",
+      price: 949,
+      strikedoffprice: 1899,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/86b44de7/zimmermann-Multicolor-Midikleid-Lyre-aus-Leinen.jpeg",
+      name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/freepeople/173a6c19/free-people-Emeraude-Robe-A-Boutons-Madame-Peacock.jpeg",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/blueandcream/70ed5bdd/loveshackfancy-Pastel-Fields-Elisabelle-Dress.jpeg",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/net-a-porter/8a5ba23f/polo-ralph-lauren-blue-Robe-chemise-En-Popeline-De-Coton-A-Rayures-Et-A-Ceinture.jpeg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/03112f0d/dolce-gabbana-Multicolor-Maxikleid-aus-Baumwollpopeline.jpeg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/72a67b09/elie-saab-pink-Robe-longue-en-soie-a-plumes.jpeg",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/revolveclothing/a1276199/elliatt-Ivory-Protea-Gown.jpeg",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/83e03b99/self-portrait-multicoloured-Feather-trimmed-Crepe-Midi-Dress.jpeg",
+      name: "UNISEX REEBOK SHOW SHOES",
+      price: 1249,
+      strikedoffprice: 1489,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/revolveclothing/a99653bd/for-love-and-lemons-Rust-Bustier.jpeg",
+      name: "WOMEN'S CLASSIC REEBOK PANTS",
+      price: 1459,
+      strikedoffprice: 1235,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/48df0418/max-mara-grey-Leisure-Benaco-Cotton-blend-Midi-Dress.jpeg",
+      name: "WOMEN'S REEBOK RUNNING RUN ESSENTIALS SHORT SLEEVE GRAPHIC",
+      price: 849,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/c8cb5e83/gucci-black-Lame-GG-Jacquard-Minidress.jpeg",
+      name: "WOMEN'S REEBOK TRAINING WOR MESH TIGHTS",
+      price: 1550,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/e9e1614f/gucci-multicoloured-Floral-Lace-Bustier-Gown.jpeg",
+      name: "WOMEN'S REEBOK RUNNING OSR HIGH-IMPACT BRA",
+      price: 1399,
+      strikedoffprice: 6599,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/2bbd46c9/jacquemus-grey-La-Robe-Saudade-Minidress.jpeg",
+      name: "UNISEX REEBOK TRAINING ACTIVE CORE BACKPACK - MEDIUM",
+      price: 949,
+      strikedoffprice: 1899,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/2342f391/safiyaa-white-Crepe-Gown.jpeg",
+      name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/cettire/6984ed36/burberry-Multi-Sleeveless-Checked-Tie-waist-Shirt-Dress.jpeg",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/vitkac/6d04b6f0/adidas-originals-BLACK-Dress-With-Logo.jpeg",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/mytheresa/e186dfa6/rebecca-vallance-designer-pink-Cupids-Bow-Gown.jpeg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/atterley/eda1a5eb/holland-cooper-Green-Military-Shirt-Dress.jpeg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/6090abfa/terani-Red-Prom-Sequin-Lace-Mermaid-Gown.jpeg",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/jarlolondon/d052ff94/jarlo-Silver-Blanche-Open-Back-Maxi-Dress-With-Train-Detail.jpeg",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      image_url:
+        "https://cdna.lystit.com/200/250/tr/photos/cettire/a64e0085/off-white-co-virgil-abloh-Black-Logo-Printed-Ribbed-Midi-Dress.jpeg",
+      name: "UNISEX REEBOK SHOW SHOES",
+      price: 1249,
+      strikedoffprice: 1489,
+    }
+  ];
+
+
+
+     let cartArr=JSON.parse(localStorage.getItem("cart-items")) || [];
+
+     Data.forEach(function(el){
+       let card=document.createElement("div")
+
+       let productImg=document.createElement("img")
+       productImg.src=el.image_url;
+
+       let title=document.createElement("h3")
+       title.innerText=el.name;
+
+       let price=document.createElement("p")
+       price.innerText=el.price;
+
+       let btn=document.createElement("button")
+       btn.innerText="Add to cart"
+       btn.addEventListener("click",function (){ addTocart(el);
+       });
+
+       card.append(productImg,title,price,btn)
+      
+       document.querySelector("#container").append(card)
+
+       localStorage.setItem("mens-data","32 products");
+     })
+
+     function addTocart(el){
+        cartArr.push(el);
+       localStorage.setItem("cart-items",JSON.stringify(cartArr));
+       //console.log(cartArr)
+     }
+</script>
