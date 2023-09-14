@@ -9,31 +9,38 @@
       crossorigin="anonymous"
     ></script>
     <style>
-        #navbar{
-          border:0px solid red;
-          width:100%;
-          height:40px;
-          text-align: center;
-          background-color: #1f1f1f;
-          color:white;
-          line-height:40px;
-        }
-        .container{
-            border:0px solid red;
-            height:50px;
-            width:100%;
-            display:flex;
-            position:fixed;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-            z-index: 1;
-        }
-        .container>div{
+        #navbar {
+      border: 0px solid red;
+      width: 100%;
+      height: 40px;
+      text-align: center;
+      background-color: #1f1f1f;
+      color: white;
+      line-height: 40px;
+      position: fixed;
+      top: 0;
+      z-index: 1;
+    }
+
+    .nav-2 {
+      border: 0px solid red;
+      height: 50px;
+      width: 100%;
+      display: flex;
+      position: fixed;
+      top: 40px;
+      background-color: white;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      cursor: pointer;
+      z-index: 1;
+    }
+        .nav-2>div{
             border:0px solid blue;
             width:32%;
             height:50px;
             margin:auto;
         }
-        .container>div>img{
+        .nav-2>div>img{
             height:100%;
             padding-left: 80px;
         }
@@ -45,6 +52,9 @@
             width:32%;
             height:50px;
             margin:auto; 
+        }
+        .card>div>a{
+          text-decoration: none;
         }
         h1{
             text-align: center;
@@ -159,7 +169,7 @@
 </head>
 <body>
     <div id="navbar">FOR ONLINE PAYMENT EXTRA ₹5% DISCOUNT ON ORDERS ABOVE ₹500</div>
-    <div class="container">
+    <div class="nav-2">
         <div>
             <img src="https://outstripinfotech.com/wpword/razi/wp-content/uploads/2022/08/200x80black.png" alt=""/>
         </div>
